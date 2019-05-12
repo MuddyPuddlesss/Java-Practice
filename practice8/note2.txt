@@ -1,0 +1,70 @@
+回顾：
+基本数据类型
+引用数据类型：String，Integer。。。
+类类型：Scanner Math System+自定义的类
+
+集合：存储数据的容器。引用类型
+      1.长度可变
+	  2.数据类型任意（地址）
+集合分类
+一、单列集合
+   Collection
+     |-List:能过存储重复元素。有索引。添加的顺序就是存储的顺序
+	   |-ArrayList：数组。适合遍历，不适合于插入、删除
+	   |-LinkedList：链表。适合于插入、删除，不适合遍历
+	   |-Vector jdk1.0 ：线程安全。效率低
+	 |-Set：不能存储重复元素。没有索引。添加的顺序未必是存储的顺序
+	   |-HashSet：基于hash算法的hash表。适合于查找
+	   |-TreeSet：二叉树。有序，字典顺序
+	   注意：如果添加的是自定义的引用类型，务必制定排序规则 类型 class not cast Comparable<自定义的引用类型>
+	       内部比较器
+		   步骤：1.自定义的引用类型 实现|继承 Comparable接口|父类
+	             2.重写Comparable接口的方法 compareTo（自定义的引用类型 a）方法  制定比较规则
+	       外部比较器：弥补了内部比较器比较规则单一的问题
+                 1.自定义一个类 实现Comparator接口
+	             2.重写Compare方法 compare方法中制定比较规则
+			外部比较器的优先级>内部比较器
+			如何使用外部比较器：利用TreeSet的有参构造方法，将自定义的外部比较器注入
+二、双列结合
+    Map<String key,value>,key不重复，因此key维护的就是Set集合
+	|-HashMap
+	|-TreeMap
+	
+	Map<String,String> m = new HashMap<String,String>();
+	m.put(key,value);
+	Set<String> keys = m.keySet();
+	for(String key : keys){
+	   value = m.get(key)
+	   System.out.println(key+"::"+value);
+	}
+	
+	可以通过获得k，v的关系（维护的也是Set视图，因为key是唯一的，那么<k,v>对就是唯一的，关系也就是唯一的）
+    Set<Entry<String,String>> entrySet=  m.entrySet();	
+	再次遍历entrySet，拿到每一个kv的关系
+	最后通过kv的关系拿到（entrySet.getKey()）key及(entrySet.getValue())value
+    	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.	拷贝一个文本文件到指定位置
+2.	拷贝一个MP3文件到指定位置
+3.	简述缓冲数组的作用

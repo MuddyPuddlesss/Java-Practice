@@ -1,0 +1,22 @@
+inter Collection 单列集合
+  |-inter List:可以存储重复元素，有索引，遍历顺序就是存储顺序
+    |-impl ArrayList：底层是数组结构。适合遍历，不适合插入和删除
+	|-impl LinkedList：底层是链表结构。适合插入删除，不适合遍历
+  |-inter Set：不可以存储重复数据。没有索引，遍历顺序和存储顺序未必一致
+    |-impl HashSet：基于hash算法的哈希表（数据+链表）。适合于查找
+	|-impl TreeSet：底层的数据结构是二叉树。有序，字典顺序
+	注意：如果存储的是自定义的类对象，则需要制定排序规则，即该类要实现Comparable接口
+	      并重写compareTo方法。这个叫内部比较器
+		  
+		  如果一个类已经实现了Comparable接口，那么这个类已经显示了内部比较。但是有一种情况，就是
+		  如果其他开发者不希望使用内部的比较规则，则可以指定外部比较器，从而使用自己的比较规则。
+		  如果开发外部比较器呢？
+		  1.创建一个比较类，这个类实现Comparator接口，从而实现这个接口中的compare方法，重写该方法
+		    指定外部比较规则。
+		  2.创建TreeSet的时候。利用TreeSet的另一个构造方法，将外部比较注入到构造函数中。即可
+		  new TreeSet(Compartor的实现类)
+
+inter Map<String key,String value>	双列集合 
+    |-impl HashMap<k,v>
+	   
+	|-impl TreeMap<k,v>
