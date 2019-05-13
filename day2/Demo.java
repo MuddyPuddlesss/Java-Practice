@@ -1,18 +1,14 @@
 package day2;
 
 public class Demo {
-
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		
 		try {
-			System.out.println("×Ö·û´®Ë÷ÒýÔ½½çÒì³£");
+			System.out.println("å­—ç¬¦ä¸²ç´¢å¼•è¶Šç•Œå¼‚å¸¸");
 			String str = args[0];
-			System.out.println("µÚËÄ¸ö×Ö·ûÎª " + str.charAt(3));
+			System.out.println("ç¬¬å››ä¸ªå­—ç¬¦ä¸º " + str.charAt(3));
 			int aa = Integer.parseInt(args[0]);
-			System.out.println("Æ½·½Îª" + aa * aa);
+			System.out.println("å¹³æ–¹ä¸º" + aa * aa);
 		} catch (ArrayIndexOutOfBoundsException e) {
 			e.printStackTrace();
 		} catch(NumberFormatException e1){
