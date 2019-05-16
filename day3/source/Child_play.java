@@ -2,13 +2,11 @@ package day4;
 
 public class Child_play {
 
-	/**
-	 * @param args
-	 */
+
 	public static void main(String[] args) {
 		Child.play();
 		Child.play();
-		System.out.println(Child.getCount()+"¸öĞ¡º¢ÔÚ¶ÑÑ©ÈË");
+		System.out.println(Child.getCount()+"ä¸ªå°å­©åœ¨å †é›ªäºº");
 	}
 
 }
@@ -17,7 +15,7 @@ class Child{
 	private static int count;
 	
 	public static void play(){
-		System.out.println("Ğ¡º¢¶ÑÑ©ÈË..");
+		System.out.println("å°å­©å †é›ªäºº..");
 		count++;
 	}
 	public static int getCount(){
