@@ -10,11 +10,11 @@ public class Static_block {
 }
 class Dog{
 	Dog(){
-		System.out.println("���췽��ִ��...");
+		System.out.println("构造方法执行...");
 	}
-	//��̬����������࣬���ڹ��췽��ִ�У�������ļ��ض����أ���ִֻ��һ��
-	//������Ӧ�ã�jdbc�������ݿ��ע������
+	//静态代码块属于类，先于构造方法执行，随着类的加载而加载，但只执行一次
+	//开发中应用：jdbc链接数据库的注册驱动
 	static{
-		System.out.println("��̬�����ִ��....");
+		System.out.println("静态代码块执行....");
 	}
 }
